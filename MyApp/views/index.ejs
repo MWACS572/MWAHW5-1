@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <table border="1">
+      <tr><th>id</th><th>Name</th><th>UserName</th><th>Email</th><th>City</th><th>Zip code</th><th>Latitude</th><th>Longitude</th><th>Website</th></tr>
+      <%for(let i in title){%>
+        <tr>
+          <td><%=title[i].id%></td>
+          <td><%=title[i].name%></td>
+          <td><%=title[i].username%></td>
+          <td><%=title[i].email%></td>
+          <td><%=title[i].address.city%></td>
+          <td><%=title[i].address.zipcode%></td>
+          <td><%=title[i].address.geo.lat%></td>
+          <td><%=title[i].address.geo.lng%></td>
+          <td><%=title[i].website%></td>
+
+        </tr>
+
+      <%}%>
+    </table>
+  </body>
+</html>
